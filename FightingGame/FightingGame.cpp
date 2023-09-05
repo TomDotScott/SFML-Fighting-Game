@@ -1,6 +1,7 @@
 #include <SFML/Window.hpp>
 #include <iostream>
 
+#include "Game.h"
 #include "Player.h"
 
 int main()
@@ -10,10 +11,11 @@ int main()
 	constexpr unsigned WINDOW_WIDTH = 960;
 	constexpr unsigned WINDOW_HEIGHT = 720;
 
-
 	sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "SFML Fighting Game");
 
-	Player player({ WINDOW_WIDTH / 2.f, WINDOW_HEIGHT / 2.f });
+	// Player player({ WINDOW_WIDTH / 2.f, WINDOW_HEIGHT / 2.f });
+
+	Game game;
 
 	while (window.isOpen())
 	{
@@ -24,14 +26,11 @@ int main()
 				window.close();
 		}
 
-		// TODO: Use a clock
-		const float deltaTime = 0.f;
-
 		window.clear();
 
-		player.Update(deltaTime);
+		game.Update();
 
-		player.Render(window);
+		game.Render(window);
 
 		window.display();
 	}
