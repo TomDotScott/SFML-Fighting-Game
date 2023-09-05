@@ -6,7 +6,7 @@ class Player
 {
 public:
 	Player(const sf::Vector2f& position);
-	void Update(const float deltaTime);
+	void Update(float deltaTime);
 	void Render(sf::RenderWindow& window);
 
 private:

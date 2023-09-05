@@ -2,7 +2,7 @@
 
 Player::Player(const sf::Vector2f& position) :
 	m_position(position),
-	m_sprite({ 10.f, 10.f })
+	m_sprite({ 25.f, 25.f })
 {
 	m_sprite.setFillColor(sf::Color::White);
 	m_sprite.setOutlineColor(sf::Color::Red);
