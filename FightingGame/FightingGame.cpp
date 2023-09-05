@@ -11,11 +11,10 @@ int main()
 	constexpr unsigned WINDOW_WIDTH = 960;
 	constexpr unsigned WINDOW_HEIGHT = 720;
 
-	sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "SFML Fighting Game");
+	sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "SFML Fighting Game", sf::Style::Titlebar | sf::Style::Close);
 
-	// Player player({ WINDOW_WIDTH / 2.f, WINDOW_HEIGHT / 2.f });
 
-	Game game;
+	Game game(WINDOW_WIDTH, WINDOW_HEIGHT);
 
 	while (window.isOpen())
 	{
