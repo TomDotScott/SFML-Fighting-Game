@@ -27,21 +27,6 @@ int main()
 
 		Keyboard::Update();
 
-		if (Keyboard::IsButtonPressed(sf::Keyboard::Key::T))
-		{
-			printf("T IS PRESSED\n");
-		}
-
-		if (Keyboard::IsButtonReleased(sf::Keyboard::Key::T))
-		{
-			printf("T IS RELEASED\n");
-		}
-
-		if (Keyboard::IsButtonDown(sf::Keyboard::Key::R))
-		{
-			printf("R IS DOWN\n");
-		}
-
 		window.clear();
 
 		game.Update();

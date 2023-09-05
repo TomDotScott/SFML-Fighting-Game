@@ -13,4 +13,7 @@ private:
 	sf::Vector2f m_position;
 	sf::Vector2f m_velocity;
 	sf::RectangleShape m_sprite;
+	float m_speed;
+
+	void HandleInput();
 };
